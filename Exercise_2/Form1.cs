@@ -1,13 +1,22 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 namespace Exercise_2
 {
     public partial class Form1 : Form
     {
         public double AllPrise { get; set; } = 0;
-        List<Product> product = null;
+        List<Product>? product = null;
         public Form1()
         {
             InitializeComponent();
-
+            product = new List<Product>();
         }
 
         private void btnAddList_Click(object sender, EventArgs e)
@@ -39,7 +48,9 @@ namespace Exercise_2
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
             product.Add(new Product());
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
             Form2 form2 = new Form2(true, product[product.Count - 1]);
             if (form2.ShowDialog() == DialogResult.OK)
             {
