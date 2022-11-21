@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -36,7 +36,7 @@ namespace Exercise_2
             }
             catch (Exception)
             {
-                MessageBox.Show("Вы не выбрали товар!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Р’С‹ РЅРµ РІС‹Р±СЂР°Р»Рё С‚РѕРІР°СЂ!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -55,7 +55,7 @@ namespace Exercise_2
             if (form2.ShowDialog() == DialogResult.OK)
             {
                 productStock.Items.Add(product[product.Count - 1]);
-                groupBoxProduct.Text = $"Товары в наличии {productStock.Items.Count}";
+                groupBoxProduct.Text = $"РўРѕРІР°СЂС‹ РІ РЅР°Р»РёС‡РёРё {productStock.Items.Count}";
             }
         }
 
@@ -73,7 +73,7 @@ namespace Exercise_2
             }
             catch (Exception)
             {
-                MessageBox.Show("Вы не выбрали товар!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Р’С‹ РЅРµ РІС‹Р±СЂР°Р»Рё С‚РѕРІР°СЂ!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }
